@@ -16,5 +16,11 @@ function sumDigits(a) {
 
 function luckyNumber(a) {
     //return true if a lucky number and false otherwise
+    let sum = 0;
+    while (a) {
+        sum = a % 10 -sum;
+        a = (a - a % 10) / 10;
+    }
+    return !sum;
 
 }
